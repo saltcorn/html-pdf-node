@@ -5,7 +5,11 @@ const hb = require("handlebars");
 module.exports;
 async function generatePdf(file, options, callback) {
   // we are using headless mode
-  let args = ["--no-sandbox", "--disable-setuid-sandbox"];
+  let args = [
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-web-security",
+  ];
   if (options.args) {
     args = options.args;
     delete options.args;
