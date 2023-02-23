@@ -1,6 +1,6 @@
 {
   "name": "@saltcorn/html-pdf-node",
-  "version": "1.0.8-beta.0",
+  "version": "1.0.8-beta.1",
   "description": "Convert any html content or html page to PDF",
   "main": "index.js",
   "directories": {
