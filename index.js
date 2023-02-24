@@ -23,6 +23,10 @@ async function generatePdf(file, options, callback) {
   if (options.executablePath) delete options.executablePath;
 
   const page = await browser.newPage();
+  if (options.cookie) {
+    if (Array.isArray(options.cookie)) await page.setCookie(...options.cookie);
+    else await page.setCookie(options.cookie);
+  }
 
   if (file.content) {
     console.log("Compiling the template with handlebars");
